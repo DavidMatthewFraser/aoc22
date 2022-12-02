@@ -32,9 +32,9 @@ int result(char a, char b)
 int main() 
 {
 	ifstream f("input.txt");
-    int total = 0;
+   	int total = 0;
 	char c, c2;
 
 	while (f >> c >> c2) { total += result(c, c2); }
-    cout << total << endl;
+   	cout << total << endl;
 }
