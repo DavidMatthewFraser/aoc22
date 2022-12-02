@@ -27,8 +27,6 @@ int result(char a, char b)
     if (diff == 0) { return 3 + move; }
     if (((diff)%2 == 0) == (diff > 0)) { return 6 + move; }
     return 0 + move;
-
-
 }
 
 int main() 
