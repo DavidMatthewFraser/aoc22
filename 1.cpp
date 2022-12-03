@@ -8,6 +8,7 @@ int main() {
 	string c;
 	string::size_type sz;
 	int m1,m2,m3,current = 0;
+
 	while (getline(f, c)) {
 		if (c == "") { 
 			if (current > m1) {
@@ -20,11 +21,12 @@ int main() {
 			} else if (current > m3) {
 				m3 = current;
 			}
+
 			current = 0;
 		}
-		else 
-			current += stoi(c, &sz);
+		else { current += stoi(c, &sz); }
 	}
+
 	cout << m1 + m2 + m3 << endl;
 	f.close();
 	return 0;
