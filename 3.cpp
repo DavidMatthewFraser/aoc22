@@ -13,22 +13,23 @@ int getPriority(char c)
 
 string findDup(string a, string b) 
 {
-        set<char> seen;
-        string dup = "";
-        for (int j=0; j<a.length(); j++) { seen.insert(a.at(j)); }
-        for (int j=0; j<b.length(); j++) 
-            if (seen.find(b.at(j)) != seen.end()) { dup += b.at(j); }
-        return dup;
+    set<char> seen;
+    string dup = "";
+    for (int j=0; j<a.length(); j++) { seen.insert(a.at(j)); }
+    for (int j=0; j<b.length(); j++) 
+    if (seen.find(b.at(j)) != seen.end()) { dup += b.at(j); }
+    return dup;
 }
 
 int main() 
 {
-	ifstream f("input.txt");
+    ifstream f("input.txt");
     vector<string> lines;
     string line;
     int total = 0;
-	while (getline(f, line)) { lines.push_back(line); }
-
+    
+    while (getline(f, line)) { lines.push_back(line); }
+	
     for (int i=0; i<lines.size() - 2; i+=3) {
         string d = findDup(lines.at(i), lines.at(i+1));
         d = findDup(d, lines.at(i+2));
