@@ -11,17 +11,9 @@ int main() {
 
 	while (getline(f, c)) {
 		if (c == "") { 
-			if (current > m1) {
-				m2 = m1;
-				m3 = m2;
-				m1 = current;
-			} else if (current > m2) {
-				m3 = m2;
-				m2 = current;
-			} else if (current > m3) {
-				m3 = current;
-			}
-
+			if (current > m1) { m2 = m1; m3 = m2; m1 = current; }
+			else if (current > m2) { m3 = m2; m2 = current; }
+			else if (current > m3) { m3 = current; }
 			current = 0;
 		}
 		else { current += stoi(c, &sz); }
