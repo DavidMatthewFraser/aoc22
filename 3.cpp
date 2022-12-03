@@ -17,7 +17,7 @@ string findDup(string a, string b)
     string dup = "";
     for (int j=0; j<a.length(); j++) { seen.insert(a.at(j)); }
     for (int j=0; j<b.length(); j++) 
-    if (seen.find(b.at(j)) != seen.end()) { dup += b.at(j); }
+        if (seen.find(b.at(j)) != seen.end()) { dup += b.at(j); }
     return dup;
 }
 
