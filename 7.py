@@ -23,8 +23,9 @@ L = []
 file.writelines(L)
 lines = file.readlines
 tree = {};
-pwd = "/";
+pwd = "/"; 
 
+# NOTE THAT I JUST DELETED THE FIRST LINE OF THE FILE
 while True:
     line = line = file.readline()
     if not line:
